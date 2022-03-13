@@ -1,16 +1,14 @@
 import { HeadingPrimary } from 'components/HeadingPrimary/HeadingPrimary'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
-const DummyPage = () => {
+const ArrivalsDummy = () => {
   return (
     <>
       <HeadingPrimary>Arrivals</HeadingPrimary>
-      <div>
-        The Arrivals feature is not ready yet, but will be soon! Check back
-        again in a few days
-      </div>
+      <Container>Please check back soon for the Arrivals feature!</Container>
     </>
   )
 }
 
-export default DummyPage
+export default ArrivalsDummy

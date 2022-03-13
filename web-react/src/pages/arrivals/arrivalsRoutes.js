@@ -1,5 +1,5 @@
 import { permitLeaderAdminArrivals } from 'permission-utils'
-import Arrivals from 'pages/arrivals/Arrivals'
+// import Arrivals from 'pages/arrivals/Arrivals'
 import BacentaArrivals from 'pages/arrivals/BacentaArrivals'
 import BacentasHaveBeenCounted from 'pages/arrivals/StateBacentasHaveArrived'
 import BacentasNotActivity from 'pages/arrivals/StateBacentasNoActivity'
@@ -7,24 +7,19 @@ import BacentasOnTheWay from 'pages/arrivals/StateBacentasOnTheWay'
 import BusFormConfirmation from 'pages/arrivals/FormAttendanceConfirmation'
 import BusFormDetails from 'pages/arrivals/BusFormDetails'
 import OnTheWaySubmission from 'pages/arrivals/FormOnTheWaySubmission'
-import ConstituencyDashboard from 'pages/arrivals/ConstituencyDashboard'
-import CouncilDashboard from './CouncilDashboard'
+import ConstituencyDashboard from 'pages/arrivals/DashboardConstituency'
+import CouncilDashboard from './DashboardCouncil'
 import MobilisationSubmission from './FormMobilisationSubmission'
 import MobilisationPicture from './MobilisationPicture'
 import BacentasMobilising from './StateBacentasMobilising'
-import DummyPage from './DummyPage'
-import StreamDashboard from './StreamDashboard'
+import StreamDashboard from './DashboardStream'
+import ArrivalsHelpersStream from './ArrivalsHelpersStream'
+import ArrivalsDummy from './ArrivalsDummy'
 
 export const arrivals = [
   {
     path: '/arrivals',
-    element: DummyPage,
-    placeholder: true,
-    roles: permitLeaderAdminArrivals('Fellowship'),
-  },
-  {
-    path: '/arrivals-working',
-    element: Arrivals,
+    element: ArrivalsDummy,
     placeholder: true,
     roles: permitLeaderAdminArrivals('Fellowship'),
   },
@@ -111,6 +106,14 @@ export const arrivals = [
     path: '/arrivals/mobilisation-picture',
     roles: permitLeaderAdminArrivals('Bacenta'),
     element: MobilisationPicture,
+    placeholder: false,
+  },
+
+  //Arrivals Helpers
+  {
+    path: '/stream/arrivals-helpers',
+    roles: permitLeaderAdminArrivals('Bacenta'),
+    element: ArrivalsHelpersStream,
     placeholder: false,
   },
 ]
