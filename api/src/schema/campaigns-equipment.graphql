@@ -222,7 +222,7 @@ extend type Mutation {
     constituencyId: ID!
     pulpits: Int!
   ): EquipmentRecord
-    @auth(rules: [{ roles: ["leaderFellowship"] }])
+    @auth(rules: [{ roles: ["adminConstituency", "leaderConstituency"] }])
     @cypher(
       statement: """
       MATCH (constituency:Constituency {id: $constituencyId})-[:HAS_CAMPAIGN]->(:EquipmentCampaign)-[:HAS_HISTORY]->(:ServiceLog)-[:HAS_RECORD]->(record:EquipmentRecord)
