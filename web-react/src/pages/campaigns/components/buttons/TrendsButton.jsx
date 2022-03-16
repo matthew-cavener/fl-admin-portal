@@ -1,9 +1,19 @@
 import React, { useContext } from 'react'
 import { MemberContext } from 'contexts/MemberContext'
 import { Button } from 'react-bootstrap'
+import './TrendsButton.css'
 
 const TrendsButton = () => {
   const { theme } = useContext(MemberContext)
+
+  // const target = 30
+
+  // if (target > 0 && width < 40) {
+  //   //return red
+  // } else if (width > 40 && width < 80) {
+  // } else if (width >= 80) {
+  // }
+
   return (
     <Button
       variant="secondary"
@@ -24,7 +34,7 @@ const TrendsButton = () => {
         <div style={{ fontSize: '14px' }}>Total Offering Bags: 17/27</div>
         <div className="progress bg-secondary" style={{ height: '13px' }}>
           <div
-            className="progress-bar"
+            className="progress-bar-red"
             role="progressbar"
             aria-valuenow="25"
             aria-valuemin="0"
@@ -37,7 +47,7 @@ const TrendsButton = () => {
         <div style={{ fontSize: '14px' }}>Total Pulpits: 12/16</div>
         <div className="progress bg-secondary" style={{ height: '13px' }}>
           <div
-            className="progress-bar"
+            className="progress-bar-yellow"
             role="progressbar"
             aria-valuenow="80"
             aria-valuemin="0"

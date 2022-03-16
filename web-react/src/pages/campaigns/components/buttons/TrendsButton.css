@@ -1,0 +1,50 @@
+.grad-red {
+  background-color: red;
+  background-image: linear-gradient(to right, #f50000, #800a0acc);
+}
+
+.grad-yellow {
+  background-color: yellow; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #ddf500, #80780acc);
+}
+
+.grad-green {
+  background-color: green; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #00f510, #0a8035cc);
+}
+
+.progress-bar-red {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  transition: width .6s ease;
+  background: -webkit-linear-gradient(left, #800a0acc 0%, #f50000 100%); /* Chrome10-25,Safari5.1-6 */
+  }
+
+  .progress-bar-yellow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    transition: width .6s ease;
+    background: -webkit-linear-gradient(left, #80780acc 0%,#ddf500 100%); /* Chrome10-25,Safari5.1-6 */
+    }
+
+    .progress-bar-green {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      transition: width .6s ease;
+      background: -webkit-linear-gradient(left, #0a8035cc 0%,#00f510 100%); /* Chrome10-25,Safari5.1-6 */
+      }
